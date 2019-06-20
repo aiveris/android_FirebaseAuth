@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.firebaseauth.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -125,7 +126,7 @@ public class SignUpLogIn extends AppCompatActivity {
 
     private void makeUserCredentials() {
         UserProfileChangeRequest updateUserProfile = new UserProfileChangeRequest.Builder()
-                .setDisplayName("YOhan")
+                .setDisplayName("Mindaugas")
                 //.setPhotoUri(Uri.parse("https://XYZ.com/ABC/myIcon.jpg"))//...or even from your phone storage
                 .build();
 
@@ -144,7 +145,6 @@ public class SignUpLogIn extends AppCompatActivity {
     public void Login(View v) {
         final String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-
 
         //checking if email and passwords are empty
         if (TextUtils.isEmpty(email)) {
